@@ -33,20 +33,21 @@ const Pesquisa = () => {
     }))
   }
   return (
-    <div className='pt-6'>
+    <div className='pt-6' >
       <PageTitle title='Pesquisa' />
       <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
-      <p className='text-center mb-6'>
+      <p className='text-center mb-6 text-yellow-900'>
         O restaurante X sempre busca por atender melhor seus clientes.<br />
         Por isso, estamos sempre abertos a ouvir a sua opinião.
       </p>
-      {!sucess && <div className='w-1/5 mx-auto'>
+      {!sucess && <div className='w-1/6 mx-auto'>
+        
         <label className='font-bold'>Seu nome:</label>
-        <input type='text'className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name ='Nome' value={form.Nome}/>
+        <input type='text'className='p-4 block shadow bg-yellow-50 px-16 my-2 rounded-lg placeholder-red-300 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name ='Nome' value={form.Nome}/>
         <label className='font-bold'>Email:</label>
-        <input type='text'className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name ='Email' value={form.Email}/>
+        <input type='text'className='p-4 block shadow bg-yellow-50 px-16  my-2 rounded-lg placeholder-red-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name ='Email' value={form.Email}/>
         <label className='font-bold'>WhatsApp:</label>
-        <input type='text'className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name ='WhatsApp' value={form.WhatsApp}/>
+        <input type='text'className='p-4 block shadow bg-yellow-50 px-16  my-2 rounded-lg placeholder-red-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name ='WhatsApp' value={form.WhatsApp}/>
         <label className='font-bold'>Nota:</label>
         <div className='flex py-6'>
           { notas.map(nota => {
@@ -58,8 +59,8 @@ const Pesquisa = () => {
           )
           })
           }
-        </div>
-        <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
+        </div>        
+        <button className='rounded-full bg-green-500 px-32 py-4 font-bold shadow-lg hover:shadow px-32 py-4 mb-3' onClick={save}>Salvar</button>
       </div>}
       {sucess && <div className='w-1/5 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
