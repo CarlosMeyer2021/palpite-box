@@ -35,7 +35,7 @@ const Pesquisa = () => {
   return (
     <div className='pt-6 bg-white'>
       <PageTitle title='Pesquisa' />
-      <div className='text-center bg-gray-300'>
+      <div className='text-center'>
         <h1 className='font-bold my-4 text-2xl'>Críticas e sugestões</h1>
         <p className='mb-6 text-yellow-900'>
           O restaurante X sempre busca por atender melhor seus clientes.<br />
@@ -44,7 +44,7 @@ const Pesquisa = () => {
       </div>
 
       {!sucess && <div className='w-screen min-w-screen max-w-3xl mx-auto'>
-        <div className='w-1/2 mx-auto'>
+        <div className='w-1/2 mx-auto border-none'>
           <label className='font-bold'>Seu nome:</label>
           <input type='text' className='w-80 p-4 block shadow bg-yellow-50 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
           <label className='font-bold'>Email:</label>
@@ -68,7 +68,7 @@ const Pesquisa = () => {
           <button className='w-80 rounded-full bg-green-500 font-bold shadow-lg hover:shadow py-4 mb-3' onClick={save}>Salvar</button>
         </div>
       </div>}
-      {sucess && <div className='w-1/6 mx-auto'>
+      {sucess && <div className='w-1/2 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
         {
           retorno.showCoupon && <div className='text-center border p-4 mb-4'>
