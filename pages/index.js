@@ -7,8 +7,8 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 const Index = () => {
   const { data, error } = useSWR('/api/get-promo', fetcher)
-    return (
-  <div>
+  return (
+    <div>
       <PageTitle title='Seja bem-vindo' />
       <p className='mt-12 text-center text-yellow-900'>
         O restaurante X sempre busca por atender melhor seus clientes. <br />
@@ -16,17 +16,16 @@ const Index = () => {
       </p>
       <div className='text-center my-12'>
         <Link href='/pesquisa'>
-          <a className='rounded-full bg-green-500 px-12 py-4 font-bold shadow-lg hover:shadow'>Dar opinião ou sugestão</a>
+          <a className='rounded-full  bg-red-800 text-white px-12 py-4 font-bold shadow-lg hover:shadow'>Dar opinião ou sugestão</a>
         </Link>
       </div>
       { !data && <p>Carregando...</p>}
       {!error && data && data.showCoupon &&
-      <p className='my-12 text-center'>
-        {data.message}
-      </p>
+        <p className='my-12 text-center'>
+          {data.message}
+        </p>
       }
-  </div>
+    </div>
   )
 }
-
 export default Index

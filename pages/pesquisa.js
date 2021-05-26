@@ -32,6 +32,7 @@ const Pesquisa = () => {
       [key]: value
     }))
   }
+
   return (
     <div className='pt-6 bg-white'>
       <PageTitle title='Pesquisa' />
@@ -46,11 +47,11 @@ const Pesquisa = () => {
       {!sucess && <div className='w-screen min-w-screen max-w-3xl mx-auto'>
         <div className='w-1/2 mx-auto border-none'>
           <label className='font-bold'>Seu nome:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-50 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
           <label className='font-bold'>Email:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-50 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
+          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
           <label className='font-bold'>WhatsApp:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-50 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
+          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
           <label className='font-bold'>Nota:</label>
           <div className='flex py-6'>
             {notas.map(nota => {
@@ -65,8 +66,12 @@ const Pesquisa = () => {
           </div>
         </div>
         <div className='w-1/2 mx-auto'>
-          <button className='w-80 rounded-full bg-green-500 font-bold shadow-lg hover:shadow py-4 mb-3' onClick={save}>Salvar</button>
+          <button className='w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' name='btnsalvar' onClick={save}>Salvar
+
+          </button>
+
         </div>
+
       </div>}
       {sucess && <div className='w-1/2 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>
