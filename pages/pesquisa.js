@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import PageTitle from '../components/PageTitle'
+import { ToastContainer, toast, Zoom, Bounce } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { data } from 'autoprefixer';
 
 const Pesquisa = () => {
   const [form, setForm] = useState({
@@ -11,7 +15,21 @@ const Pesquisa = () => {
   const notas = [0, 1, 2, 3, 4, 5]
   const [sucess, setSuccess] = useState(false)
   const [retorno, setRetorno] = useState({})
+
   const save = async () => {
+    toast("🚀 SALVO COM  SUCESSO !", {
+      className: "custom-toast ",
+      type: toast.TYPE.SUCCESS,
+      rtl: true,
+      draggable: false,
+      hideProgressBar: false,
+      pauseOnHover: false,
+      autoClose: 2000,
+      progress: 0,
+      transition: Zoom,
+      position: toast.POSITION.TOP_RIGHT
+    })
+
     try {
       const response = await fetch('/api/save', {
         method: 'POST',
@@ -36,6 +54,9 @@ const Pesquisa = () => {
   return (
     <div className='pt-6 bg-white'>
       <PageTitle title='Pesquisa' />
+      <>
+        <ToastContainer />
+      </>
       <div className='text-center'>
         <h1 className='font-bold my-4 text-2xl'>Críticas e sugestões</h1>
         <p className='mb-6 text-yellow-900'>

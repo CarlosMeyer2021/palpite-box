@@ -14,30 +14,22 @@ export default async (req, res) => {
     await doc.loadInfo()
     const sheet = doc.sheetsByIndex[3]
     const data = JSON.parse(req.body)
-    console.log(doc.title)
+    //console.log(doc.title)
     const sheetConfig = doc.sheetsByIndex[3]
     //console.log(doc.sheetsByIndex[3])
     await sheetConfig.loadCells('A3:B3')
 
-    //const mostrarPromocao = sheetConfig.getCell(2, 0)
-    //console.log(mostrarPromocao.value)
-    //const textoCell = sheetConfig.getCell(2, 1)
-    //console.log(textoCell)
-    //Nome	Email	WhatsApp	Cupom	Promo	Data Preenchimento
-
-    await sheet.addRow({
+    const enviaContato = await sheet.addRow({
       Nome: data.Nome,
       Email: data.Email,
       Telefone: data.Telefone,
       Mensagem: data.Mensagem,
       'Data Preenchimento': moment().format('DD/MM/YYYY, HH:mm:ss'),
       //moment().subtract(10, 'days').calendar();
-
     })
 
-
   } catch (error) {
-    console.log(error)
+    //console.log(error)
     res.end('error')
   }
 }
