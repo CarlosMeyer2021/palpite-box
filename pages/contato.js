@@ -20,7 +20,7 @@ const Contato = () => {
 
   const saveContato = async () => {
 
-    toast("🚀 SALVO COM  SUCESSO !", {
+    toast("🚀 CONTATO SALVO COM SUCESSO !", {
       className: "custom-toast ",
       type: toast.TYPE.SUCCESS,
       rtl: true,

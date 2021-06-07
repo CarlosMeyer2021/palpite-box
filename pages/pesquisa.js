@@ -17,7 +17,7 @@ const Pesquisa = () => {
   const [retorno, setRetorno] = useState({})
 
   const save = async () => {
-    toast("🚀 SALVO COM  SUCESSO !", {
+    toast("🚀 CUPOM GERADO COM SUCESSO !", {
       className: "custom-toast ",
       type: toast.TYPE.SUCCESS,
       rtl: true,
