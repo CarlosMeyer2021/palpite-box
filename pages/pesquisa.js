@@ -65,11 +65,11 @@ const Pesquisa = () => {
       </p>
       </div>
 
-      {!sucess && <div className='max-w-sm max-w-md max-w-lg w-auto mx-auto  bg-yellow-500'>
-        <div className='w-auto mx-auto w-4/5 bg-green-100'>
+      {!sucess && <div className='max-w-sm max-w-md max-w-lg w-auto mx-auto'>
+        <div className='w-auto mx-auto w-4/5'>
           <div className='w-auto mx-auto w-5/6'>
             <label className='mx-auto font-bold'>Seu nome:</label>
-            <input type='text' className='mx-auto w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
             <label className='font-bold'>Email:</label>
             <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
             <label className='font-bold'>WhatsApp:</label>
@@ -87,14 +87,14 @@ const Pesquisa = () => {
               }
             </div>
           </div>
-        </div>
-        <div className='w-auto mx-auto w-3/5'>
-          <button className='w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' name='btnsalvar' onClick={save}>Salvar
+
+          <div className='w-auto mx-auto w-4/5'>
+            <button className='w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' name='btnsalvar' onClick={save}>Salvar
 
           </button>
 
+          </div>
         </div>
-
       </div>}
       {sucess && <div className='w-1/2 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou crítica.</p>

@@ -105,22 +105,23 @@ const Contato = () => {
       </div>
 
       {!sucess && <div className='max-w-sm max-w-md max-w-lg mx-auto'>
-        <div className='w-auto mx-auto w-3/5'>
-          <label className='font-bold'>Seu nome:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
-          <label className='font-bold'>Email:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='E-mail' onChange={onChange} name='Email' value={form.Email} />
-          <label className='font-bold'>Contato:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Telefone' onChange={onChange} name='Telefone' value={form.Telefone} />
-          <label className='font-bold'>Mensagem:</label>
-          <textarea className='w-80 h-36 p-4 block shadow bg-yellow-100 my-4 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Digite sua mensagem' onChange={onChange} name='Mensagem' value={form.Mensagem}></textarea>
+        <div className='w-auto mx-auto w-4/5'>
+          <div className='w-auto mx-auto w-5/6'>
+            <label className='font-bold'>Seu nome:</label>
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+            <label className='font-bold'>Email:</label>
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='E-mail' onChange={onChange} name='Email' value={form.Email} />
+            <label className='font-bold'>Contato:</label>
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Telefone' onChange={onChange} name='Telefone' value={form.Telefone} />
+            <label className='font-bold'>Mensagem:</label>
+            <textarea className='w-80 h-36 p-4 block shadow bg-yellow-100 my-4 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Digite sua mensagem' onChange={onChange} name='Mensagem' value={form.Mensagem}></textarea>
 
+          </div>
+
+          <div className='w-auto mx-auto w-4/5'>
+            <button className='border-0 w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' onClick={saveContato}>Enviar</button>
+          </div>
         </div>
-
-        <div className='w-auto mx-auto w-3/5'>
-          <button className='border-0 w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' onClick={saveContato}>Enviar</button>
-        </div>
-
       </div>}
     </div>
 
