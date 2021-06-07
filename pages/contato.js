@@ -97,7 +97,7 @@ const Contato = () => {
       <>
         <ToastContainer />
       </>
-      <div className='w-auto mx-auto w-3/5 text-center'>
+      <div className='w-auto text-center'>
         <h1 className='font-bold my-4 text-2xl'>Contato</h1>
         <p className='mb-6 text-yellow-900'>
           Fale conosco em um de nossos canais de atendimento.

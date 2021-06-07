@@ -57,7 +57,7 @@ const Pesquisa = () => {
       <>
         <ToastContainer />
       </>
-      <div className='w-auto mx-auto w-3/5 text-center'>
+      <div className='text-center'>
         <h1 className='font-bold my-4 text-2xl'>Críticas e sugestões</h1>
         <p className='mb-6 text-yellow-900'>
           O restaurante X sempre busca por atender melhor seus clientes.<br />
@@ -65,25 +65,27 @@ const Pesquisa = () => {
       </p>
       </div>
 
-      {!sucess && <div className='max-w-sm max-w-md max-w-lg mx-auto'>
-        <div className='w-auto mx-auto w-3/5'>
-          <label className='font-bold'>Seu nome:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
-          <label className='font-bold'>Email:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
-          <label className='font-bold'>WhatsApp:</label>
-          <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
-          <label className='font-bold'>Nota:</label>
-          <div className='flex py-6'>
-            {notas.map(nota => {
-              return (
-                <labe className='block px-5 '>
-                  {nota}<br />
-                  <input type='radio' name='Nota' value={nota} onChange={onChange} />
-                </labe>
-              )
-            })
-            }
+      {!sucess && <div className='max-w-sm max-w-md max-w-lg w-auto mx-auto  bg-yellow-500'>
+        <div className='w-auto mx-auto w-4/5 bg-green-100'>
+          <div className='w-auto mx-auto w-4/5'>
+            <label className='mx-auto font-bold'>Seu nome:</label>
+            <input type='text' className='mx-auto w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+            <label className='font-bold'>Email:</label>
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
+            <label className='font-bold'>WhatsApp:</label>
+            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
+            <label className='font-bold'>Nota:</label>
+            <div className='flex py-6'>
+              {notas.map(nota => {
+                return (
+                  <labe className='block px-5 '>
+                    {nota}<br />
+                    <input type='radio' name='Nota' value={nota} onChange={onChange} />
+                  </labe>
+                )
+              })
+              }
+            </div>
           </div>
         </div>
         <div className='w-auto mx-auto w-3/5'>
