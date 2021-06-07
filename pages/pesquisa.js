@@ -67,7 +67,7 @@ const Pesquisa = () => {
 
       {!sucess && <div className='max-w-sm max-w-md max-w-lg w-auto mx-auto  bg-yellow-500'>
         <div className='w-auto mx-auto w-4/5 bg-green-100'>
-          <div className='w-auto mx-auto w-4/5'>
+          <div className='w-auto mx-auto w-5/6'>
             <label className='mx-auto font-bold'>Seu nome:</label>
             <input type='text' className='mx-auto w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
             <label className='font-bold'>Email:</label>
