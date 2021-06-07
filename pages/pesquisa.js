@@ -66,7 +66,7 @@ const Pesquisa = () => {
       </div>
 
       {!sucess && <div className='w-screen min-w-screen max-w-3xl mx-auto'>
-        <div className='w-1/2 mx-auto border-none'>
+        <div className='w-6/12 mx-auto border-none'>
           <label className='font-bold'>Seu nome:</label>
           <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
           <label className='font-bold'>Email:</label>
