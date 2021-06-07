@@ -97,15 +97,15 @@ const Contato = () => {
       <>
         <ToastContainer />
       </>
-      <div className='text-center'>
+      <div className='w-auto text-center'>
         <h1 className='font-bold my-4 text-2xl'>Contato</h1>
         <p className='mb-6 text-yellow-900'>
           Fale conosco em um de nossos canais de atendimento.
       </p>
       </div>
 
-      {!sucess && <div className='w-screen min-w-screen max-w-3xl mx-auto'>
-        <div className='w-6/12 mx-auto border-none'>
+      {!sucess && <div className='max-w-sm max-w-md max-w-lg mx-auto'>
+        <div className='w-auto mx-auto w-3/5'>
           <label className='font-bold'>Seu nome:</label>
           <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-500 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
           <label className='font-bold'>Email:</label>
@@ -117,7 +117,7 @@ const Contato = () => {
 
         </div>
 
-        <div className='w-6/12 mx-auto'>
+        <div className='w-auto mx-auto w-3/5'>
           <button className='border-0 w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' onClick={saveContato}>Enviar</button>
         </div>
 
