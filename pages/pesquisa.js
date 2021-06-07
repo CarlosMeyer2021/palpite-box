@@ -57,7 +57,7 @@ const Pesquisa = () => {
       <>
         <ToastContainer />
       </>
-      <div className='text-center'>
+      <div className='w-auto mx-auto w-3/5 text-center'>
         <h1 className='font-bold my-4 text-2xl'>Críticas e sugestões</h1>
         <p className='mb-6 text-yellow-900'>
           O restaurante X sempre busca por atender melhor seus clientes.<br />
