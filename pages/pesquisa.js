@@ -74,17 +74,17 @@ const Pesquisa = () => {
       {!sucess && <div className='relative w-full max-w-md px-5 py-4 mx-auto rounded-md'>
         <div className='relative'>
           <div className=''>
-            <label className='mx-auto font-bold'>Seu nome:</label>
+            <label className='font-bold'>Seu nome:</label>
             <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
             <label className='font-bold'>Email:</label>
             <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
             <label className='font-bold'>WhatsApp:</label>
             <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
             <label className='font-bold'>Nota:</label>
-            <div className='flex py-6 '>
+            <div className='py-6 '>
               {notas.map(nota => {
                 return (
-                  <labe className='block px-7 '>
+                  <labe className='block px-5 '>
                     {nota}<br />
                     <input type='radio' name='Nota' value={nota} onChange={onChange} />
                   </labe>
