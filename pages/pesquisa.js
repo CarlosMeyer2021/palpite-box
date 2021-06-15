@@ -81,7 +81,7 @@ const Pesquisa = () => {
             <label className='font-bold'>WhatsApp:</label>
             <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
             <label className='font-bold'>Nota:</label>
-            <div className='py-6 '>
+            <div className='flex py-6 '>
               {notas.map(nota => {
                 return (
                   <labe className='block px-5 '>
