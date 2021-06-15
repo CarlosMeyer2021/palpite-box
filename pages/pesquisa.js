@@ -24,11 +24,17 @@ const Pesquisa = () => {
       draggable: false,
       hideProgressBar: false,
       pauseOnHover: false,
-      autoClose: 2000,
+      autoClose: 2500,
       progress: 0,
       transition: Zoom,
-      position: toast.POSITION.TOP_RIGHT
+      position: toast.POSITION.TOP_CENTER
     })
+    if (toast) {
+      setTimeout(() => {
+        setForm({ Nome: "", Email: "", Telefone: "", WhatsApp: "" })
+      }, 2500);
+
+    }
 
     try {
       const response = await fetch('/api/save', {
@@ -61,24 +67,24 @@ const Pesquisa = () => {
         <h1 className='font-bold my-4 text-2xl'>Críticas e sugestões</h1>
         <p className='mb-6 text-yellow-900'>
           O restaurante X sempre busca por atender melhor seus clientes.<br />
-        Por isso, estamos sempre abertos a ouvir a sua opinião.
-      </p>
+          Por isso, estamos sempre abertos a ouvir a sua opinião.
+        </p>
       </div>
 
-      {!sucess && <div className='max-w-sm max-w-md max-w-lg w-auto mx-auto'>
-        <div className='w-auto mx-auto w-4/5'>
-          <div className='w-auto mx-auto w-5/6'>
+      {!sucess && <div className='relative w-full max-w-md px-5 py-4 mx-auto rounded-md'>
+        <div className='relative'>
+          <div className=''>
             <label className='mx-auto font-bold'>Seu nome:</label>
-            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+            <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-400 placeholder-opacity-50' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
             <label className='font-bold'>Email:</label>
-            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
+            <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
             <label className='font-bold'>WhatsApp:</label>
-            <input type='text' className='w-80 p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
+            <input type='text' className='w-full p-4 block shadow bg-yellow-100 my-2 rounded-lg placeholder-gray-300 placeholder-opacity-50' placeholder='Whatsapp' onChange={onChange} name='WhatsApp' value={form.WhatsApp} />
             <label className='font-bold'>Nota:</label>
-            <div className='flex py-6'>
+            <div className='flex py-6 '>
               {notas.map(nota => {
                 return (
-                  <labe className='block px-5 '>
+                  <labe className='block px-7 '>
                     {nota}<br />
                     <input type='radio' name='Nota' value={nota} onChange={onChange} />
                   </labe>
@@ -88,10 +94,10 @@ const Pesquisa = () => {
             </div>
           </div>
 
-          <div className='w-auto mx-auto w-4/5'>
-            <button className='w-80 rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' name='btnsalvar' onClick={save}>Salvar
+          <div className=''>
+            <button className='w-full rounded-full bg-red-800 text-white font-bold shadow-lg hover:shadow py-4 mb-3' name='btnsalvar' onClick={save}>Gerar Cupom
 
-          </button>
+            </button>
 
           </div>
         </div>

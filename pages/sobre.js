@@ -3,17 +3,23 @@ import Link from 'next/link'
 import PageTitle from '../components/PageTitle'
 
 const Sobre = () => {
+
   return (
-    <div class="inline">
+    <div className='bg-red-100'>
       <PageTitle title='Sobre' />
-      <div class="mx-auto">
+      <div className='w-auto text-center bg-red-100'>
+        <h1 className='font-bold mb-1 text-2xl'>Sobre</h1>
+      </div>
 
-        <div class="relative">
-          <img class="w-screen opacity-25" src="fundo-sobre.jpg" alt='fundo-sobre' />
+      <div class="md:flex">
+
+        <div class="w-full md:w-1/2 bg-red-50">
+          <div class="">
+            <img class="w-screen opacity-25" src="fundo-sobre.jpg" alt='fundo-sobre' />
+          </div>
         </div>
-
-        <div class="p-8 absolute  top-20 mt-32">
-          <p class="italic text-gray-900 mt-2 text-gray-500 text-justifyalign-middle md:w-1/2 mx-auto">
+        <div class="w-full md:w-1/2 my-0 bg-red-50">
+          <p class="italic text-gray-900 mt-2 text-gray-500">
             Nossa História
             Conheça um pouco sobre nós
             O Restaurante foi inaugurado em 1997, em uma das mais badaladas
@@ -31,7 +37,6 @@ const Sobre = () => {
             Por esses motivos, o Aoyama é um dos restaurantes japoneses mais
             conhecidos da cidade.</p>
         </div>
-
       </div>
     </div>
   )
